@@ -1,0 +1,69 @@
+.container{
+    width: 100%;
+    height: 100vh;
+}
+
+.areImage{
+    padding-top: 20px;
+    display: flex;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.066);
+    width: 70%;
+    border-radius: 86px;
+    opacity: 1;
+    margin: 10px auto;
+
+    img{
+        padding-bottom: 10px;
+        width: 90%;
+        height: 500px;
+    }
+}
+
+.areaSinopse{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    h1{
+        color: var(--white);
+    }
+
+    
+}
+
+.main{
+    margin-top: 50px;
+    width: 90%;
+
+    h2{
+        margin-bottom: 30px;
+        color: var(--white);
+        font-weight: 100;
+        font-size: 20px;
+    }
+
+    p{
+        color: var(--white);
+    }
+
+}
+
+.Info{
+    width: 100%;
+    padding-left: 20px;
+    h1{
+        margin-bottom: 20px;
+    }
+}
+
+.play{
+    padding: 5px;
+    margin-right: 20px;
+}
+
+.home{
+    padding: 5px;
+    margin-right: 20px;
+}
