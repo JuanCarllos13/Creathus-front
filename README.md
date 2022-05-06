@@ -1,34 +1,67 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<h1 align="center">
+  <br>Cine
+</h1>
 
-## Getting Started
+<h4 align="center">
+  Cretahus Movies
+</h4>
 
-First, run the development server:
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+## ❓ O que é ?
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Este é um repositório no qual se encontra a parte Front-end de uma aplicação. Faço um clone desse Repositório e der o comando "yarn", em seguinda um "yarn dev" para executar.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+<hr>
 
-## Learn More
+## 📚 Seções
+O site é composto por 5 seções diferentes:
 
-To learn more about Next.js, take a look at the following resources:
+- **Home::** Nele podemos ver todos os filmes.
+- **Informção** É onde podemos todas as informações do filme, Sinopse, Diretor, Atores.
+- **Adicionar** Onde podemos adicionar novos filmes.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## 💼 Tecnologias utilizadas
+Para o desenvolvimento deste site utilizei as seguintes tecnologias:
 
-## Deploy on Vercel
+- HTML;
+- CSS;
+- JavaScript;
+- React.js;
+- Next.js
+- TypeScript
+- Scss
+<hr>
+## ❗ Você tem que ver!
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Essa aplicação é a parte front-end do projeto, recomendo para você que veja o repositório com a API que foi feita por mim mesmo com Node.js, TypeScript, prisma e banco de dados PostgreSQL.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Link do Back-end: https://github.com/JuanCarllos13/Creathus-api
+<hr>
+
+
+## ❗ Lembrando!
+
+Você tem que rodar o Front-end da aplicação junto com back-end ao mesmo tempo.!
+<hr>
+---
+## 👨‍💻  Autor
+
+ <br>
+<table>
+  <tr>
+    <td align="center">
+      <a href="https://github.com/JuanCarllos13">
+        <img src="https://user-images.githubusercontent.com/86435195/148881183-10c14efa-9cfa-444e-983b-4ebd408e9513.jpeg" width="100px;" height="150px" alt="Foto do Juan no GitHub"/><br>
+        <sub>
+          <b>JUAN CARLOS</b>
+        </sub>
+      </a>
+    </td>
+  </tr>
+</table>
+</table>
+<hr>

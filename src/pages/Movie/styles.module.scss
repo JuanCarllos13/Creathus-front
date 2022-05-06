@@ -17,6 +17,7 @@
         padding-bottom: 10px;
         width: 90%;
         height: 500px;
+        object-fit: fill;
     }
 }
 
@@ -59,11 +60,58 @@
 }
 
 .play{
-    padding: 5px;
+    padding: 10px;
     margin-right: 20px;
+    background-color: orange;
+    color: var(--white);
+    border: none;
+
+    svg{
+        margin-right: 5px;
+    }
+
+    
+    &:hover{
+        opacity: 0.8;
+    }
+    &:active{
+        opacity: 0.5;
+    }
 }
 
 .home{
-    padding: 5px;
+    padding: 8px;
     margin-right: 20px;
+
+    svg{
+        margin-right: 5px;
+    }
+
+    
+    &:hover{
+        opacity: 0.8;
+    }
+    &:active{
+        opacity: 0.5;
+    }
+}
+
+.delete{
+    padding: 8px;
+    margin-right: 20px;
+    background-color: red;
+    color: var(--white);
+    border: none;
+    
+    svg{
+        margin-right: 5px;
+    }
+
+    
+    &:hover{
+        opacity: 0.8;
+    }
+    &:active{
+        opacity: 0.5;
+    }
 }

@@ -8,8 +8,7 @@ export default function Header() {
         <header className={styles.headerContainer} >
 
             <div>
-                <h1>C</h1>
-                
+                <h1 className={styles.h1}>C</h1>
             </div>
 
             <a href={'/'}>

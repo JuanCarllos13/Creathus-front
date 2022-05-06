@@ -4,7 +4,7 @@ import styles from '../../styles/Home.module.scss'
 import Header from "../components/Header"
 import api from "../services/api"
 import Link from 'next/link'
-
+import Footer from "../components/Footer"
 
 export interface MoviesProps {
   id: string
@@ -16,8 +16,6 @@ export interface MoviesProps {
 
 export default function Home() {
   const [movies, setMovies] = useState<MoviesProps[]>([])
-
-  console.log(movies)
   useEffect(() => {
     async function getMovies() {
       const response = await api.get("/movie")
@@ -51,9 +49,8 @@ export default function Home() {
             ))
           }
         </div>
-
-
       </div>
+      <Footer />
 
     </div>
   )

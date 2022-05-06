@@ -5,14 +5,15 @@ import { useRouter } from 'next/router'
 import api from "../../services/api";
 import { MoviesProps } from '../index'
 import styles from './styles.module.scss'
-import { FiPlay, FiHome } from "react-icons/fi";
+import { FiPlay, FiHome, FiTrash2 } from "react-icons/fi";
 import Link from "next/link";
-
+import { toast } from "react-toastify";
 
 export default function MovieInfo() {
 	const [movie, setMovie] = useState<MoviesProps>()
 	const [load, setLoad] = useState(true)
 	const { query } = useRouter()
+	const router = useRouter()
 
 	useEffect(() => {
 		async function loadMovie() {
@@ -24,6 +25,23 @@ export default function MovieInfo() {
 		loadMovie()
 	}, [query.index])
 
+
+	async function DeleteMovie() {
+		try {
+			await api.delete('/movie', {
+				params: {
+					movie_id: query.index
+				}
+			})
+			toast.success("Deletado com Sucesso")
+			router.push('/')
+		} catch (err) {
+			console.log(err)
+			toast.error("Erro ao deletar")
+		}
+
+	}
+
 	if (load) {
 		return (
 			<div>
@@ -34,28 +52,35 @@ export default function MovieInfo() {
 	return (
 		<div className={styles.container}>
 			<div className={styles.areImage}>
-				<img src={movie.image} alt={"Image do filme"} />
+				<img src={movie?.image} alt={"Image do filme"} />
 			</div>
 
 			<div className={styles.areaSinopse}>
 
 				<div className={styles.Info}>
-					<h1>{movie.title}</h1>
+					<h1>{movie?.title}</h1>
 					<button className={styles.play}>
-						<FiPlay color="black" />
+						<FiPlay color="white" />
 						Play</button>
 
 					<Link href={'/'}>
-					<button className={styles.home} >
-						<FiHome />
-						Home </button>
-					</Link>	
-				
+						<button className={styles.home} >
+							<FiHome />
+							Home </button>
+					</Link>
+
+					<button className={styles.delete} onClick={DeleteMovie}>
+						<FiTrash2/>
+						Deletar
+					</button>
+
+
+
 				</div>
 
 				<div className={styles.main}>
 					<h2>SINOPSE INFO</h2>
-					<p>{movie.descripion}</p>
+					<p>{movie?.descripion}</p>
 				</div>
 
 			</div>

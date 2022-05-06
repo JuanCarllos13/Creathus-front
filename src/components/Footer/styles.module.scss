@@ -1,0 +1,31 @@
+.Footer {
+    margin-left: 100px;
+    height: 100px;
+    width: 94%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    span{
+        color: var(--white);
+        margin: 0 10px;
+        font-size: 10px;
+        font-weight: bolder;
+    }
+}
+
+@media(max-width: 700px){
+    .Footer{
+        margin: 0;
+       
+    }
+}
+
+@media(max-width: 450px){
+    .Footer{
+        position: relative;
+    }
+}
