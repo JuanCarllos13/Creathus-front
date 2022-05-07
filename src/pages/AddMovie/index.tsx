@@ -6,6 +6,7 @@ import { FiUpload } from 'react-icons/fi'
 import { toast } from "react-toastify";
 import api from "../../services/api";
 import Footer from "../../components/Footer";
+import { useRouter } from "next/router";
 
 export default function AddMovie() {
   const [Autor, setAutor] = useState('')
@@ -13,6 +14,7 @@ export default function AddMovie() {
   const [description, setDescription] = useState('')
   const [avatarUrl, setAvatarUrl] = useState('')
   const [imageAvatar, setImageAvatar] = useState(null)
+  const router = useRouter()
 
   function handleFile(e: ChangeEvent<HTMLInputElement>) {
 
@@ -50,12 +52,13 @@ export default function AddMovie() {
 
       await api.post("/movie", data)
 
-      toast.success("Produto cadastrado com sucesso")
+      toast.success("Filme cadastrado com sucesso")
       setAutor('')
       setTitle('')
       setDescription('')
       setImageAvatar(null)
       setAvatarUrl('')
+      router.push('/')
 
 
 
@@ -67,11 +70,6 @@ export default function AddMovie() {
 
 
   }
-
-  function Cancel() {
-    alert("TEstand")
-  }
-
 
   return (
     <div>
@@ -91,7 +89,7 @@ export default function AddMovie() {
                 <img
                   className={styles.preview}
                   src={avatarUrl}
-                  alt="Foto do produto"
+                  alt="Foto do Filme"
                   width={250}
                   height={250}
                 />
